@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username:
+    password:
+
+  sql:
+    init:
+      data-locations: classpath:sql/initDB.sql
+      mode: always
+
+  jpa:
+    properties.hibernate:
+      show_sql: true
+      format_sql: true
+      database-platform: org.hibernate.dialect.H2Dialect
+      hbm2ddl.auto: validate
+
+logging:
+  level:
+    com.testvoicecom.managerclient.service: INFO
+
+
+
